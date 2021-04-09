@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>intro2R</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="intro2R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="intro2R" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Joel Parker" />
+
+
+<meta name="date" content="2021-04-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path=""><a href="#chapter-1-the-prerequisites"><i class="fa fa-check"></i><b>1</b> Chapter 1: The prerequisites</a><ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#installing-r-and-r-studio"><i class="fa fa-check"></i><b>1.1</b> Installing R and R Studio</a><ul>
+<li class="chapter" data-level="1.1.1" data-path=""><a href="#ive-never-installed-r-and-rstudio-in-my-computer-or-im-not-sure-i-have-r-and-rstudio-installed-in-my-computer."><i class="fa fa-check"></i><b>1.1.1</b> I’ve never installed R and RStudio in my computer OR I’m not sure I have R and RStudio installed in my computer.</a></li>
+<li class="chapter" data-level="1.1.2" data-path=""><a href="#i-already-have-r-and-rstudio-installed."><i class="fa fa-check"></i><b>1.1.2</b> I already have R and RStudio installed.</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">intro2R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">intro2R</h1>
+<p class="author"><em>Joel Parker</em></p>
+<p class="date"><em>2021-04-08</em></p>
+</div>
+<div id="chapter-1-the-prerequisites" class="section level1">
+<h1><span class="header-section-number">1</span> Chapter 1: The prerequisites</h1>
+<p>This is a two part intro to R workshop. Part I introduces the basics of coding in R, including how to manipulate objects, use functions, and write if statements, for loops, and simple functions. Part II is based on the tidyverse package, and it covers how to load, inspect, and explore data in R. While learners at different expertise levels are welcome to attend, these workshops were designed for participants with no or little programming experience. </p>
+<p>This lesson plan was created based on many other resources that are already available online, mainly Claudia A Engel’s “Introduction to R” bookdown available at <a href="https://cengel.github.io/R-intro" class="uri">https://cengel.github.io/R-intro</a> and “Programming with R” from Software Carpentry available at <a href="http://swcarpentry.github.io/r-novice-inflammation" class="uri">http://swcarpentry.github.io/r-novice-inflammation</a>.</p>
+<div id="installing-r-and-r-studio" class="section level2">
+<h2><span class="header-section-number">1.1</span> Installing R and R Studio</h2>
+<p>If you are running your R code in your computer, you need to install both R and RStudio. Alternatively, you can create a free account at <a href="http://rstudio.cloud" class="uri">http://rstudio.cloud</a> and run your R code in the cloud. Either way, we will be using the same IDE (i.e., RStudio).</p>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>What’s an IDE? IDE stands for integrated development environment, and its goal is to facilitate coding by integrating a text editor, a console and other tools into one window.</p>
+</div>
+<div id="ive-never-installed-r-and-rstudio-in-my-computer-or-im-not-sure-i-have-r-and-rstudio-installed-in-my-computer." class="section level3">
+<h3><span class="header-section-number">1.1.1</span> I’ve never installed R and RStudio in my computer OR I’m not sure I have R and RStudio installed in my computer.</h3>
+<ol style="list-style-type: decimal">
+<li>Download and install R from <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
+<li>Download and install RStudio from <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a></li>
+</ol>
+</div>
+<div id="i-already-have-r-and-rstudio-installed." class="section level3">
+<h3><span class="header-section-number">1.1.2</span> I already have R and RStudio installed.</h3>
+<ol style="list-style-type: decimal">
+<li>Open RStudio</li>
+<li>Check your R version by entering sessionInfo() on your console.</li>
+<li>The latest release for R was April 24, 2020 (R version 4.0.0, 2020-04-24, Arbor Day). If your R version is older than the most recent version, please follow step 1 in the previous section to update R.</li>
+<li>Check your RStudio version, if your version is older than Version 1.2.5042, please follow step 2 in the previous section to update RStudio.</li>
+</ol>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>How often should I update R and RStudio? Always make sure that you have the latest version of R, RStudio, and the packages you’re using in your code to ensure you are not running into bugs that are caused by having older versions installed in your computer.</p>
+<p>When asked, Jenny Bryan summarizes the importance of keeping your system up-to-date saying that “You will always eventually have a reason that you must update. So you can either do that very infrequently, suffer with old versions in the middle, and experience great pain at update. Or admit that maintaining your system is a normal ongoing activity, and do it more often.”</p>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>

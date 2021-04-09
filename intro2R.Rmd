@@ -1,35 +1,96 @@
 ---
 title: "intro2R"
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Joel Parker"
-date: "4/8/2021"
-output: html_document
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# The prerequisites
+This is a two part intro to R workshop. Part I introduces the basics of coding in R, including how to manipulate objects, use functions, and write if statements, for loops, and simple functions. Part II is based on the tidyverse package, and it covers how to load, inspect, and explore data in R. While learners at different expertise levels are welcome to attend, these workshops were designed for participants with no or little programming experience. \newline
+
+This lesson plan was created based on many other resources that are already available online, mainly Claudia A Engel’s “Introduction to R” bookdown available at https://cengel.github.io/R-intro and “Programming with R” from Software Carpentry available at http://swcarpentry.github.io/r-novice-inflammation.
+
+
+## Installing R and R Studio
+If you are running your R code in your computer, you need to install both R and RStudio. Alternatively, you can create a free account at http://rstudio.cloud and run your R code in the cloud. Either way, we will be using the same IDE (i.e., RStudio).
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+What’s an IDE? IDE stands for integrated development environment, and its goal is to facilitate coding by integrating a text editor, a console and other tools into one window.
+
+</div>
+
+###  I’ve never installed R and RStudio in my computer OR I’m not sure I have R and RStudio installed in my computer.
+
+1. Download and install R from https://cran.r-project.org
+2. Download and install RStudio from https://rstudio.com/products/rstudio/download/#download
+
+### I already have R and RStudio installed.
+1. Open RStudio
+2. Check your R version by entering sessionInfo() on your console.
+3. The latest release for R was April 24, 2020 (R version 4.0.0, 2020-04-24, Arbor Day). If your R version is older than the most recent version, please follow step 1 in the previous section to update R.
+4. Check your RStudio version, if your version is older than Version 1.2.5042, please follow step 2 in the previous section to update RStudio.
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+How often should I update R and RStudio? Always make sure that you have the latest version of R, RStudio, and the packages you’re using in your code to ensure you are not running into bugs that are caused by having older versions installed in your computer.
+
+When asked, Jenny Bryan summarizes the importance of keeping your system up-to-date saying that “You will always eventually have a reason that you must update. So you can either do that very infrequently, suffer with old versions in the middle, and experience great pain at update. Or admit that maintaining your system is a normal ongoing activity, and do it more often.”
+
+</div>
+
+# Intro to R Part I
+## Getting to know your IDE
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+What’s an \textbf{IDE}? IDE stands for \textbf{i}ntegrated \textbf{d}evelopment \textbf{e}nvironment, and its goal is to facilitate coding by integrating a text editor, a console and other tools into one window.
+
+</div>
+
+
+We are using RStudio as our IDE for this workshop. You can either download and install R and RStudio on your computer (for instructions on how to do so, see the “Before we start” section) or create a free account at http://rstudio.cloud and run your R code in the cloud.
+
+In this part of the workshop we will start an R project and situating ourselves around our IDE.
+
+</div>
+
+# Intro to R Part I
+## Getting to know your IDE
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+Why create a RStudio project? RStudio projects make it easier to keep your projects organized, since each project has their own working directory, workspace, history, and source documents.
+
+</div>
+
+1. Start a new R project
+2. Create a new R script
+3. Savethe R script as 01-intro_to_r_part_one
+
+
+## Operations and Objects
+Let’s start by using R as a calculator. On your console type 3 + 3 and hit enter.
+```{r}
+
+3 + 3
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
