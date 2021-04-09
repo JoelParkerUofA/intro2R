@@ -93,4 +93,8 @@ Let’s start by using R as a calculator. On your console type 3 + 3 and hit ent
 3 + 3
 ```
 
+Let’s save our calculation into an object, by using the assignment symbol <-.
+```{r}
+sum_result <- 3 + 3
 
+```
